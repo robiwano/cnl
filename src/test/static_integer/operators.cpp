@@ -105,6 +105,15 @@ namespace {
             ASSERT_EQ(expected, actual);
         }
 #endif
+
+#if !defined(_MSC_VER) && !defined(__clang__) && (!defined(__GNUG__) || __GNUG__ < 7)
+        static_assert(
+                identical(
+                        cnl::make_static_integer(
+                                231584178474632390847141970017375815706539969331281128078915168015826259279872_wide),
+                        cnl::static_integer<260>{1}<<257),
+                "");
+#endif
     }
 
     namespace test_shift_right_native {
