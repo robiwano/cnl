@@ -82,6 +82,15 @@ namespace {
                                 100000000000000000000000000000000000000000000000000000000000000000000000000000_wide)/3),
                 "");
 #endif
+
+        TEST(static_integer, divide)
+        {
+            auto expected = cnl::static_integer<226>(
+                    3333333333333333333333333333333333333333333333333333333333333333333_wide);
+            auto actual = cnl::make_static_integer(
+                    10000000000000000000000000000000000000000000000000000000000000000000_wide)/3;
+            ASSERT_EQ(expected, actual);
+        }
     }
 
     namespace test_shift_left {
