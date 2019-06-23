@@ -86,9 +86,6 @@ namespace {
                         cnl::safe_integer<2>{2},
                         cnl::safe_integer<1>{1}+cnl::safe_integer<1>{1}),
                 "cnl::safe_integer operator+");
-    }
-
-    namespace test_add {
         static_assert(
                 identical(
                         cnl::safe_integer<2>{2}-cnl::safe_integer<2>{1},
