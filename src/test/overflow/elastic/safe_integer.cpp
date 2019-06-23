@@ -219,6 +219,14 @@ namespace {
     }
 
 #if !defined(CNL_UNREACHABLE_UB_ENABLED)
+    TEST(safe_integer, construction)
+    {
+        cnl::safe_integer<31> ex{987653210LL};
+        cnl::safe_integer<32> a{987653210LL};
+        cnl::safe_integer<31> ac{cnl::_impl::scale<0, 2>(a)};
+        ASSERT_TRUE(identical(ex, ac));
+    }
+
     TEST(safe_integer, pre_increment_overflow) {
         auto a = cnl::safe_integer<3>{7};
         ASSERT_DEATH(++ a, "positive overflow");
