@@ -173,11 +173,14 @@ namespace {
         static_assert(rounding_integer{-0.501} == -1, "cnl::rounding_integer test failed");
     }
 
-    namespace arithmetic {
+    namespace test_negate {
+        static_assert(identical(rounding_integer<int>{-1}, -rounding_integer<char>{1}),
+                "rounding_integer unary operator-");
+    }
+
+    namespace test_multiply {
         static_assert(identical(rounding_integer<>{3}*rounding_integer<>{7}, rounding_integer<>{21}),
                 "rounding_integer operator*");
-        static_assert(identical(rounding_integer<int>{-1}, -rounding_integer<char>{1}),
-                      "rounding_integer unary operator-");
     }
 
     namespace divide {
@@ -372,6 +375,17 @@ namespace {
                 "static_integer pre-increment return value");
         ASSERT_EQ(&b, &a) << "static_integer pre-increment return address";
         ASSERT_EQ(INT_MAX, b) << "static_integer pre-increment";
+    }
+
+    TEST(rounding_integer, pre_increment_native)
+    {
+        using type = rounding_integer<int, cnl::native_rounding_tag>;
+        auto b = type(22.75);
+        auto &a = ++b;
+        static_assert(std::is_same<rounding_integer<>&, decltype(a)>::value, "");
+        ASSERT_EQ(&b, &a);
+        ASSERT_EQ(23.75, a);
+        ASSERT_EQ(23.75, b);
     }
 
     TEST(rounding_integer, pre_decrement) {
