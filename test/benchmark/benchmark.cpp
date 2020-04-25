@@ -50,8 +50,8 @@ static void sub(benchmark::State& state)
 template<class T>
 static void mul(benchmark::State& state)
 {
-    auto factor1 = static_cast<T>(numeric_limits<T>::max()/int8_t{5});
-    auto factor2 = static_cast<T>(numeric_limits<T>::max()/int8_t{3});
+    auto factor1 = static_cast<T>(numeric_limits<T>::max()/5.);
+    auto factor2 = factor1 / 3;
     while (state.KeepRunning()) {
         benchmark::DoNotOptimize(factor1);
         benchmark::DoNotOptimize(factor2);

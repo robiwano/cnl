@@ -155,6 +155,9 @@ ExternalProject_Add(
 # add_gtest_dependency
 
 function(add_gtest_dependency target)
+    # gtest
+    target_link_libraries("${target}" ${CONAN_LIBS})
+
     target_include_directories("${target}" SYSTEM PRIVATE "${CONAN_INCLUDE_DIRS_GTEST}")
 endfunction(add_gtest_dependency)
 
@@ -163,7 +166,7 @@ endfunction(add_gtest_dependency)
 
 add_executable(test-unit-plain all.cpp)
 set_target_properties(test-unit-plain PROPERTIES COMPILE_FLAGS "${COMMON_CXX_FLAGS}")
-target_link_libraries(test-unit-plain "${COMMON_LINK_FLAGS}")
+target_link_libraries(test-unit-plain Cnl "${COMMON_LINKER_FLAGS}")
 add_test(test-unit-plain "${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/test-unit-plain")
 add_gtest_dependency(test-unit-plain)
 add_dependencies(test-all test-unit-plain)
@@ -173,7 +176,7 @@ add_dependencies(test-all test-unit-plain)
 
 # given the path to a source file containing gtest tests,
 # creates and returns a target that runs them
-function(make_test source out_target compile_flags linker_flags)
+function(make_test source out_target compile_flags)
 
     # turn source file path into target name (e.g. "foo/bar.cpp" -> "test-unit-foo-bar")
     string(REPLACE ".cpp" "" stripped "${source}")
@@ -183,7 +186,7 @@ function(make_test source out_target compile_flags linker_flags)
     add_executable("${target}" "${source}")
     target_include_directories("${target}" PRIVATE "${CMAKE_CURRENT_LIST_DIR}")
     set_target_properties("${target}" PROPERTIES COMPILE_FLAGS "${COMMON_CXX_FLAGS} ${compile_flags}")
-    target_link_libraries("${target}" "${COMMON_LINK_FLAGS}" ${linker_flags})
+    target_link_libraries("${target}" Cnl "${COMMON_LINKER_FLAGS}")
     add_test("${target}" "${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/${target}")
 
     # Google Test dependency
@@ -209,14 +212,14 @@ endfunction(make_test)
 # create tests to verify CNL
 
 foreach(source ${test_sources})
-    make_test("${source}" target "${TEST_CXX_FLAGS} ${SANITIZE_CXX_FLAGS}" "${SANITIZE_LINKER_FLAGS}")
+    make_test("${source}" target "${TEST_CXX_FLAGS}")
 endforeach(source)
 
 ######################################################################
 # create tests to show off CNL
 
 foreach(source ${sample_sources})
-    make_test("${source}" target "${SAMPLE_CXX_FLAGS}" "")
+    make_test("${source}" target "${SAMPLE_CXX_FLAGS}")
 endforeach(source)
 
 ######################################################################
@@ -231,7 +234,7 @@ add_dependencies(test-unit-glm Glm)
 
 if(Boost_FOUND AND Boost_VERSION GREATER 106099 AND CNL_EXCEPTIONS)
     # Boost.SIMD has problems building with gcc-7.x
-    make_test(boost.simd.cpp target "${SAMPLE_CXX_FLAGS}" "")
+    make_test(boost.simd.cpp target "${SAMPLE_CXX_FLAGS}")
 
     ExternalProject_Add(
         BoostSimd

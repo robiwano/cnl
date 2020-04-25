@@ -2,6 +2,15 @@
     "cmake.configureArgs": [
         "-DCNL_DEV=ON",
         "-DCMAKE_CXX_COMPILER_LAUNCHER=ccache",
-        "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON"
-    ]
+        "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON",
+        "-DCMAKE_TOOLCHAIN_FILE=${workspaceFolder}/test/cmake/toolchain/gcc.cmake",
+        "-DCNL_SANITIZE=ON",
+        "-DCNL_INT128=ON",
+    ],
+    "files.associations": {
+        "vector": "cpp",
+        "istream": "cpp",
+        "ostream": "cpp",
+        "type_traits": "cpp"
+    }
 }
