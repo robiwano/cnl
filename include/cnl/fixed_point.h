@@ -10,6 +10,7 @@
 #if !defined(CNL_FIXED_POINT_H)
 #define CNL_FIXED_POINT_H
 
+#include "_impl/scaled/power.h"
 #include "scaled_integer.h"
 
 /// compositional numeric library

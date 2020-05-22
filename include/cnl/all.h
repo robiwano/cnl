@@ -115,6 +115,7 @@
 #include "numeric.h"
 #include "overflow.h"
 #include "overflow_integer.h"
+#include "pseudo_float.h"
 #include "rounding.h"
 #include "rounding_integer.h"
 #include "scaled_integer.h"
