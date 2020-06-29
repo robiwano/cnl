@@ -1,0 +1,28 @@
+var dir_8fa585e01cb749ef455c2ae371ceeabb =
+[
+    [ "binary_operator.h", "number_2binary__operator_8h_source.html", null ],
+    [ "can_convert_tag_family.h", "can__convert__tag__family_8h_source.html", null ],
+    [ "comparison_operator.h", "comparison__operator_8h_source.html", null ],
+    [ "declaration.h", "number_2declaration_8h_source.html", null ],
+    [ "definition.h", "number_2definition_8h_source.html", null ],
+    [ "digits.h", "number_2digits_8h_source.html", null ],
+    [ "from_rep.h", "number_2from__rep_8h_source.html", null ],
+    [ "from_value.h", "number_2from__value_8h_source.html", null ],
+    [ "inc_dec_operator.h", "number_2inc__dec__operator_8h_source.html", null ],
+    [ "is_composite.h", "number_2is__composite_8h_source.html", null ],
+    [ "is_number.h", "number_2is__number_8h_source.html", null ],
+    [ "make_number.h", "make__number_8h_source.html", null ],
+    [ "operator_helpers.h", "operator__helpers_8h_source.html", null ],
+    [ "operators.h", "number_2operators_8h_source.html", null ],
+    [ "rep.h", "number_2rep_8h_source.html", null ],
+    [ "rounding.h", "__impl_2number_2rounding_8h_source.html", null ],
+    [ "scale.h", "number_2scale_8h_source.html", null ],
+    [ "set_digits.h", "number_2set__digits_8h_source.html", null ],
+    [ "set_rep.h", "number_2set__rep_8h_source.html", null ],
+    [ "set_rounding.h", "number_2set__rounding_8h_source.html", null ],
+    [ "set_tag.h", "number_2set__tag_8h_source.html", null ],
+    [ "shift_operator.h", "number_2shift__operator_8h_source.html", null ],
+    [ "tag.h", "number_2tag_8h_source.html", null ],
+    [ "to_rep.h", "number_2to__rep_8h_source.html", null ],
+    [ "unary_operator.h", "unary__operator_8h_source.html", null ]
+];
