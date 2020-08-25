@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>CNL: cnl/_impl/scaled_integer/math.h File Reference</title>
+<title>CNL: cnl/numbers.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -27,7 +27,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">CNL
-   &#160;<span id="projectnumber">v0.0.6</span>
+   &#160;<span id="projectnumber">v1.0.0</span>
    </div>
    <div id="projectbrief">Compositional Numeric Library</div>
   </td>
@@ -65,7 +65,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('__impl_2scaled__integer_2math_8h.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('numbers_8h_source.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -84,43 +84,34 @@ $(document).ready(function(){initNavTree('__impl_2scaled__integer_2math_8h.html'
 </div>
 
 <div class="header">
-  <div class="summary">
-<a href="#namespaces">Namespaces</a> &#124;
-<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">math.h File Reference</div>  </div>
+<div class="title">numbers.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p>some cmath specializations for <code><a class="el" href="classcnl_1_1scaled__integer.html" title="literal real number approximation that uses fixed-point arithmetic">cnl::scaled_integer</a></code> type;  
-<a href="#details">More...</a></p>
-<div class="textblock"><code>#include &quot;rep.h&quot;</code><br />
-<code>#include &quot;tag.h&quot;</code><br />
-<code>#include &quot;<a class="el" href="scaled__integer_2type_8h_source.html">type.h</a>&quot;</code><br />
-</div>
-<p><a href="__impl_2scaled__integer_2math_8h_source.html">Go to the source code of this file.</a></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
-Namespaces</h2></td></tr>
-<tr class="memitem:namespacecnl"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecnl.html">cnl</a></td></tr>
-<tr class="memdesc:namespacecnl"><td class="mdescLeft">&#160;</td><td class="mdescRight">compositional numeric library <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:aaccde6af3b68974c76d24e0db966e809"><td class="memTemplParams" colspan="2">template&lt;class Rep , int Exponent&gt; </td></tr>
-<tr class="memitem:aaccde6af3b68974c76d24e0db966e809"><td class="memTemplItemLeft" align="right" valign="top">constexpr scaled_integer&lt; Rep, power&lt; Exponent &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecnl.html#aaccde6af3b68974c76d24e0db966e809">cnl::exp2</a> (scaled_integer&lt; Rep, power&lt; Exponent &gt;&gt; x)</td></tr>
-<tr class="memdesc:aaccde6af3b68974c76d24e0db966e809"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates exp2(x), i.e. 2^xAccurate to 1LSB for up to 32 bit underlying representation.  <a href="namespacecnl.html#aaccde6af3b68974c76d24e0db966e809">More...</a><br /></td></tr>
-<tr class="separator:aaccde6af3b68974c76d24e0db966e809"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>some cmath specializations for <code><a class="el" href="classcnl_1_1scaled__integer.html" title="literal real number approximation that uses fixed-point arithmetic">cnl::scaled_integer</a></code> type; </p>
-</div></div><!-- contents -->
+<a href="numbers_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//          Copyright John McFarlane 2019.</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// Distributed under the Boost Software License, Version 1.0.</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//    (See accompanying file ../LICENSE_1_0.txt or copy at</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">//          http://www.boost.org/LICENSE_1_0.txt)</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#if !defined(CNL_NUMBERS_H)</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#define CNL_NUMBERS_H</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#if defined(__cpp_concepts)</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="numbers__20_8h.html">_impl/numbers_20.h</a>&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;_impl/numbers_17.h&quot;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#endif  // CNL_NUMBERS_H</span></div>
+</div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="anumbers__20_8h_html"><div class="ttname"><a href="numbers__20_8h.html">numbers_20.h</a></div><div class="ttdoc">Reference implementation of the.</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_393b27578f88cdebcee55a9120110f4f.html">cnl</a></li><li class="navelem"><a class="el" href="dir_65345d10d925e9ddef75e5eba73807ed.html">_impl</a></li><li class="navelem"><a class="el" href="dir_fc2d06503ca9aa43cf9905f15ce6d927.html">scaled_integer</a></li><li class="navelem"><a class="el" href="__impl_2scaled__integer_2math_8h.html">math.h</a></li>
+    <li class="navelem"><a class="el" href="dir_393b27578f88cdebcee55a9120110f4f.html">cnl</a></li><li class="navelem"><a class="el" href="numbers_8h.html">numbers.h</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
