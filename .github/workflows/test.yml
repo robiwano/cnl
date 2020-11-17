@@ -10,7 +10,7 @@ jobs:
   posix-conan-test:
     strategy:
       matrix:
-        name: [clang-11, osx-gcc-10, gcc-10, clang-5, gcc-5, gcc-7, armv7]
+        name: [clang-11, osx-gcc-10, gcc-10, armv7]
         include:
           # Clang-11
           - name: clang-11
@@ -27,7 +27,6 @@ jobs:
             int128: "ON"
             linux-container: johnmcfarlane/cnl_ci:clang-11-libcpp
             os-version: ubuntu-20.04
-            std: 17
             stdlib: libc++
             toolchain: clang-libc++.cmake
 
@@ -44,7 +43,6 @@ jobs:
             generator: "Ninja"
             int128: "ON"
             os-version: macos-10.15
-            std: 20
             stdlib: libstdc++11
             toolchain: gcc.cmake
 
@@ -62,61 +60,6 @@ jobs:
             int128: "ON"
             linux-container: johnmcfarlane/cnl_ci:gcc-10
             os-version: ubuntu-20.04
-            std: 20
-            stdlib: libstdc++11
-            toolchain: gcc.cmake
-
-          # Clang-5
-          - name: clang-5
-            compiler: clang
-            version: "5.0"
-            os: linux
-            arch: x86_64
-            build-type: Release
-            cc: clang
-            cxx: clang++
-            exceptions: "ON"
-            generator: "Ninja"
-            int128: "ON"
-            linux-container: johnmcfarlane/cnl_ci:clang-5-libstdcpp
-            os-version: ubuntu-20.04
-            std: 11
-            stdlib: libstdc++11
-            toolchain: clang.cmake
-
-          # GCC-5
-          - name: gcc-5
-            compiler: gcc
-            version: "5"
-            os: linux
-            arch: x86_64
-            build-type: Release
-            cc: gcc-5
-            cxx: g++-5
-            exceptions: "ON"
-            generator: "Ninja"
-            int128: "ON"
-            linux-container: johnmcfarlane/cnl_ci:gcc-5
-            os-version: ubuntu-20.04
-            std: 11
-            stdlib: libstdc++11
-            toolchain: gcc.cmake
-
-          # Contrary
-          - name: gcc-7
-            cxx: g++-7
-            cc: gcc-7
-            version: "7"
-            exceptions: "OFF"
-            int128: "OFF"
-            os: linux
-            arch: x86_64
-            build-type: Debug
-            compiler: gcc
-            generator: "Unix Makefiles"
-            linux-container: johnmcfarlane/cnl_ci:gcc-7
-            os-version: ubuntu-18.04
-            std: 14
             stdlib: libstdc++11
             toolchain: gcc.cmake
 
@@ -134,7 +77,6 @@ jobs:
             int128: "OFF"
             linux-container: johnmcfarlane/cnl_ci:gcc-10
             os-version: ubuntu-20.04
-            std: 20
             stdlib: libstdc++11
             toolchain: gcc-armv7.cmake
 
@@ -161,7 +103,7 @@ jobs:
         conan remote add johnmcfarlane/cnl https://api.bintray.com/conan/johnmcfarlane/cnl && \
         conan profile new default --detect && \
         conan profile update settings.compiler=${{matrix.compiler}} default && \
-        conan profile update settings.compiler.cppstd=${{matrix.std}} default && \
+        conan profile update settings.compiler.cppstd=20 default && \
         conan profile update settings.compiler.libcxx=${{matrix.stdlib}} default && \
         conan profile update settings.compiler.version=${{matrix.version}} default && \
         conan profile update settings.arch=${{matrix.arch}} default
@@ -176,7 +118,7 @@ jobs:
       run: |
         cmake \
           -DCMAKE_BUILD_TYPE=${{matrix.build-type}} \
-          -DCMAKE_CXX_STANDARD=${{matrix.std}} \
+          -DCMAKE_CXX_STANDARD=20 \
           -DCMAKE_CXX_CLANG_TIDY=${{matrix.clang-tidy}} \
           -DCMAKE_PROJECT_cnl_INCLUDE:FILEPATH=$(pwd)/conan_paths.cmake \
           -DCMAKE_TOOLCHAIN_FILE:FILEPATH=$(pwd)/test/cmake/toolchain/${{matrix.toolchain}} \
