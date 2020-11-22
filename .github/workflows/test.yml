@@ -9,6 +9,7 @@ jobs:
   # Build and test many combinations on Linux/OS X using Conan
   posix-conan-test:
     strategy:
+      fail-fast: false
       matrix:
         name: [clang-11, osx-gcc-10, gcc-10, clang-5, gcc-5, gcc-7, armv7]
         include:
@@ -173,6 +174,7 @@ jobs:
           $GITHUB_WORKSPACE
 
     - name: Configure build system
+      if: ( matrix.arch == 'BBC_B' )
       run: |
         cmake \
           -DCMAKE_BUILD_TYPE=${{matrix.build-type}} \
@@ -186,7 +188,7 @@ jobs:
           $GITHUB_WORKSPACE
 
     - name: Build tests
-      run: cmake --build . -- -j $(nproc)
+      run: conan build $GITHUB_WORKSPACE
 
     - name: Test library
       if: ( matrix.arch != 'armv7' )
@@ -196,6 +198,7 @@ jobs:
   windows-conan-test:
     runs-on: windows-2019
     strategy:
+      fail-fast: false
       matrix:
         arch: [x86_64, x86]
         include:
@@ -255,6 +258,7 @@ jobs:
   # Build and test latest on Linux using only CMake
   linux-cmake-test:
     strategy:
+      fail-fast: false
       matrix:
         compiler: [clang-head, gcc-head]
 

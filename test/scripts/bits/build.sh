@@ -4,13 +4,9 @@
 
 set -euo pipefail
 
-NUM_CPUS=${NUM_CPUS:-$(nproc)}
+PROJECT_DIR=$(
+  cd "$(dirname "$0")"/../../..
+  pwd
+)
 
-ccache --show-stats
-
-cmake \
-  --build . \
-  --target "$1" \
-  -- -j "${NUM_CPUS}"
-
-ccache --show-stats
+conan build "${PROJECT_DIR}"

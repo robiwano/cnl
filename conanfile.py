@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-from conans import ConanFile
+from conans import ConanFile, CMake
 
 class CnlConan(ConanFile):
     name = "cnl"
@@ -12,7 +12,7 @@ class CnlConan(ConanFile):
     description = "A Compositional Numeric Library for C++"
     topics = ("fixed-point", "value-types")
     settings = "os", "compiler", "build_type", "arch"
-    generators = "cmake_paths"
+    generators = "cmake_find_package"
     no_copy_source = True
     requires = "gtest/1.10.0","benchmark/1.5.0@johnmcfarlane/stable"
 
@@ -21,6 +21,11 @@ class CnlConan(ConanFile):
         "type": "git",
         "url": "https://github.com/johnmcfarlane/cnl.git",
     }
+
+    def build(self):
+        cmake = CMake(self, set_cmake_flags=True)
+        cmake.configure()
+        cmake.build()
 
     def package(self):
         self.copy("include/*.h")

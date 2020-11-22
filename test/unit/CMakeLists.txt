@@ -157,7 +157,7 @@ ExternalProject_Add(
 # add_gtest_dependency
 
 function(add_gtest_dependency target)
-    target_link_libraries("${target}" GTest::Main)
+    target_link_libraries("${target}" GTest::gtest_main)
 endfunction(add_gtest_dependency)
 
 ######################################################################
