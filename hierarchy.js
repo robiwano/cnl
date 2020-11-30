@@ -12,6 +12,7 @@ var hierarchy =
     [ "cnl::native_overflow_tag", "structcnl_1_1native__overflow__tag.html", null ],
     [ "cnl::native_rounding_tag", "structcnl_1_1native__rounding__tag.html", null ],
     [ "cnl::nearest_rounding_tag", "structcnl_1_1nearest__rounding__tag.html", null ],
+    [ "cnl::neg_inf_rounding_tag", "structcnl_1_1neg__inf__rounding__tag.html", null ],
     [ "cnl::remove_signedness< T, class >", "structcnl_1_1remove__signedness.html", null ],
     [ "cnl::rep< T, Enable >", "structcnl_1_1rep.html", null ],
     [ "cnl::rep< elastic_integer< Digits, Narrowest > >", "structcnl_1_1rep_3_01elastic__integer_3_01Digits_00_01Narrowest_01_4_01_4.html", null ],

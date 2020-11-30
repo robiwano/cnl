@@ -11,6 +11,7 @@ var namespacecnl =
     [ "native_overflow_tag", "structcnl_1_1native__overflow__tag.html", null ],
     [ "native_rounding_tag", "structcnl_1_1native__rounding__tag.html", null ],
     [ "nearest_rounding_tag", "structcnl_1_1nearest__rounding__tag.html", null ],
+    [ "neg_inf_rounding_tag", "structcnl_1_1neg__inf__rounding__tag.html", null ],
     [ "remove_signedness", "structcnl_1_1remove__signedness.html", null ],
     [ "rep", "structcnl_1_1rep.html", null ],
     [ "rep< elastic_integer< Digits, Narrowest > >", "structcnl_1_1rep_3_01elastic__integer_3_01Digits_00_01Narrowest_01_4_01_4.html", null ],

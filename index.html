@@ -27,7 +27,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">CNL
-   &#160;<span id="projectnumber">v1.0.0</span>
+   &#160;<span id="projectnumber">development</span>
    </div>
    <div id="projectbrief">Compositional Numeric Library</div>
   </td>
@@ -107,7 +107,7 @@ Core Components</h2>
 <li><a class="el" href="classcnl_1_1elastic__integer.html">elastic_integer</a> - prevents overflow at compile-time by generalizing promotion rules;</li>
 <li><a class="el" href="namespacecnl.html#ab74fb0d85515e9b32e2391877bfb0b2c">overflow_integer</a> - handles integer overflow at run-time;</li>
 <li><a class="el" href="namespacecnl.html#a2bfb2e0941f011516ac4158096590b30">rounding_integer</a> - improves rounding behavior of integers;</li>
-<li><a class="el" href="namespacecnl.html#a125c8d4d7407de88efbd1a8709d70ac9">wide_integer</a> - provides integers wider than 64 and 128 bits using multi-word arithmetic;</li>
+<li><a class="el" href="namespacecnl.html#af33d9f07892d68c409e9afa238cccaf0">wide_integer</a> - provides integers wider than 64 and 128 bits using multi-word arithmetic;</li>
 <li><a class="el" href="structcnl_1_1fraction.html">fraction</a> - low-level dividend/divisor pair aids refined division handling and</li>
 <li><a class="el" href="structcnl_1_1constant.html">constant</a> - a numerics-friendly alternative to <a class="elRef" href="http://en.cppreference.com/w/cpp/types/integral_constant.html">std::integral_constant</a>.</li>
 </ul>
@@ -117,12 +117,12 @@ Composite Types</h2>
 <p>In combination, the core types produce composites which address multiple concerns.</p>
 <p>Provided composite types include:</p><ul>
 <li><a class="el" href="namespacecnl.html#a33a18414d5edb885354b8a5c1c51806d">elastic_scaled_integer</a> (<a class="el" href="classcnl_1_1scaled__integer.html">scaled_integer</a> and <a class="el" href="classcnl_1_1elastic__integer.html">elastic_integer</a>) - real-number approximation which uses promotion to avoid overflow;</li>
-<li><a class="el" href="namespacecnl.html#ab84979e9c09ff27d096f3addae74c20d">static_integer</a> (<a class="el" href="namespacecnl.html#a2bfb2e0941f011516ac4158096590b30">rounding_integer</a>, <a class="el" href="namespacecnl.html#ab74fb0d85515e9b32e2391877bfb0b2c">overflow_integer</a>, <a class="el" href="classcnl_1_1elastic__integer.html">elastic_integer</a> and <a class="el" href="namespacecnl.html#a125c8d4d7407de88efbd1a8709d70ac9">wide_integer</a>) - fully-featured safe, accurate integer type and</li>
+<li><a class="el" href="namespacecnl.html#ab84979e9c09ff27d096f3addae74c20d">static_integer</a> (<a class="el" href="namespacecnl.html#a2bfb2e0941f011516ac4158096590b30">rounding_integer</a>, <a class="el" href="namespacecnl.html#ab74fb0d85515e9b32e2391877bfb0b2c">overflow_integer</a>, <a class="el" href="classcnl_1_1elastic__integer.html">elastic_integer</a> and <a class="el" href="namespacecnl.html#af33d9f07892d68c409e9afa238cccaf0">wide_integer</a>) - fully-featured safe, accurate integer type and</li>
 <li><a class="el" href="namespacecnl.html#a60d1f9a1c93a501bef14e46ce587fb9e">static_number</a> (<a class="el" href="classcnl_1_1scaled__integer.html">scaled_integer</a> and <a class="el" href="namespacecnl.html#ab84979e9c09ff27d096f3addae74c20d">static_integer</a>) - a fully-featured safe, accurate real number approximation.</li>
 </ul>
 <p>Many more combinations are possible. For example:</p><ul>
 <li><code>safe_integer</code> (<a class="el" href="namespacecnl.html#ab74fb0d85515e9b32e2391877bfb0b2c">overflow_integer</a> and <a class="el" href="classcnl_1_1elastic__integer.html">elastic_integer</a>);</li>
-<li><code>wide_elastic_integer</code> (<a class="el" href="classcnl_1_1elastic__integer.html">elastic_integer</a> and <a class="el" href="namespacecnl.html#a125c8d4d7407de88efbd1a8709d70ac9">wide_integer</a>) and</li>
+<li><code>wide_elastic_integer</code> (<a class="el" href="classcnl_1_1elastic__integer.html">elastic_integer</a> and <a class="el" href="namespacecnl.html#af33d9f07892d68c409e9afa238cccaf0">wide_integer</a>) and</li>
 <li><code>safe_fraction</code> (<a class="el" href="structcnl_1_1fraction.html">fraction</a> and <code>safe_integer</code>).</li>
 </ul>
 <h1><a class="anchor" id="Examples"></a>

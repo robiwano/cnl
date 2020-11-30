@@ -37,10 +37,10 @@ var NAVTREEINDEX0 =
 "classcnl_1_1elastic__integer.html":[2,0,0,4],
 "classcnl_1_1elastic__integer.html#a25ef43537f94acc0b4e8a58dd21a5647":[2,0,0,4,0],
 "classcnl_1_1elastic__integer.html#aa08bd06a571e3ed45a4b1b4f79899926":[2,0,0,4,1],
-"classcnl_1_1scaled__integer.html":[2,0,0,16],
-"classcnl_1_1scaled__integer.html#a38ef25040504b7c022e853e63d7bc773":[2,0,0,16,1],
-"classcnl_1_1scaled__integer.html#a47d879a07d2dd82e52629cb64a1a829b":[2,0,0,16,0],
-"classcnl_1_1scaled__integer.html#a5a1ab807a36d990d9cb45fe31e0a0f1a":[2,0,0,16,2],
+"classcnl_1_1scaled__integer.html":[2,0,0,17],
+"classcnl_1_1scaled__integer.html#a38ef25040504b7c022e853e63d7bc773":[2,0,0,17,1],
+"classcnl_1_1scaled__integer.html#a47d879a07d2dd82e52629cb64a1a829b":[2,0,0,17,0],
+"classcnl_1_1scaled__integer.html#a5a1ab807a36d990d9cb45fe31e0a0f1a":[2,0,0,17,2],
 "cmath_2abs_8h_source.html":[3,0,0,0,0,0],
 "cmath_8h.html":[3,0,0,4],
 "cmath_8h_source.html":[3,0,0,4],
@@ -208,6 +208,7 @@ var NAVTREEINDEX0 =
 "native__rounding__tag_8h_source.html":[3,0,0,0,10,2],
 "native__tag_8h_source.html":[3,0,0,0,8,4],
 "nearest__rounding__tag_8h_source.html":[3,0,0,0,10,3],
+"neg__inf__rounding__tag_8h_source.html":[3,0,0,0,10,4],
 "num__traits_2digits_8h_source.html":[3,0,0,0,6,4],
 "num__traits_2from__rep_8h_source.html":[3,0,0,0,6,6],
 "num__traits_2from__value_8h_source.html":[3,0,0,0,6,7],
@@ -248,6 +249,5 @@ var NAVTREEINDEX0 =
 "numbers__17_8h_source.html":[3,0,0,0,23],
 "numbers__20_8h.html":[3,0,0,0,24],
 "numbers__20_8h_source.html":[3,0,0,0,24],
-"numeric_8h.html":[3,0,0,15],
-"numeric_8h_source.html":[3,0,0,15]
+"numeric_8h.html":[3,0,0,15]
 };

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>CNL: cnl/_impl/operators/generic.h File Reference</title>
+<title>CNL: cnl::neg_inf_rounding_tag Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -65,7 +65,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('operators_2generic_8h.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('structcnl_1_1neg__inf__rounding__tag.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -84,35 +84,27 @@ $(document).ready(function(){initNavTree('operators_2generic_8h.html',''); initR
 </div>
 
 <div class="header">
-  <div class="summary">
-<a href="#namespaces">Namespaces</a>  </div>
   <div class="headertitle">
-<div class="title">generic.h File Reference</div>  </div>
+<div class="title">cnl::neg_inf_rounding_tag Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>a place to centralize most duplicate arithmetic operator boilerplate  
-<a href="#details">More...</a></p>
-<div class="textblock"><code>#include &quot;<a class="el" href="config_8h_source.html">../config.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="operators_2operators_8h_source.html">operators.h</a>&quot;</code><br />
-<code>#include &lt;type_traits&gt;</code><br />
-</div>
-<p><a href="operators_2generic_8h_source.html">Go to the source code of this file.</a></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
-Namespaces</h2></td></tr>
-<tr class="memitem:namespacecnl"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecnl.html">cnl</a></td></tr>
-<tr class="memdesc:namespacecnl"><td class="mdescLeft">&#160;</td><td class="mdescRight">compositional numeric library <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
+<p>tag to specify floor or round towards minus infinity rounding behavior in arithmetic operations  
+ <a href="structcnl_1_1neg__inf__rounding__tag.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="rounding_8h_source.html">cnl/rounding.h</a>&gt;</code></p>
+
+<p>Inherits cnl::_impl::homogeneous_deduction_tag_base, and cnl::_impl::homogeneous_operator_tag_base.</p>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>a place to centralize most duplicate arithmetic operator boilerplate </p>
+<div class="textblock"><p>tag to specify floor or round towards minus infinity rounding behavior in arithmetic operations </p>
+<p>Arithmetic operations using this tag round by truncating 2's complement binary representation, thus round all values towards minus infinity.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="namespacecnl.html#a2bfb2e0941f011516ac4158096590b30" title="An integer which detects overflow.">cnl::rounding_integer</a>, <a class="el" href="namespacecnl.html#a68467e2e21418ea8d7bb1e1d2aa12983" title="adds two values together">cnl::add</a>, <a class="el" href="namespacecnl.html#adb3609481e29df23b5ec7872e805ca8f" title="converts a value to a type">cnl::convert</a>, <a class="el" href="namespacecnl.html#abb966266954a9252ddb1c65e4f5f84b3" title="divides one value by another">cnl::divide</a>, cnl::left_shift, <a class="el" href="namespacecnl.html#a27d6cb1c40a6993c9d70feaca93dfc1c" title="multiplies one value by another">cnl::multiply</a>, <a class="el" href="namespacecnl.html#a6fb6cb5e5725bef6dba0d87aa2113483" title="subtracts one value from another">cnl::subtract</a>, <a class="el" href="structcnl_1_1neg__inf__rounding__tag.html" title="tag to specify floor or round towards minus infinity rounding behavior in arithmetic operations">cnl::neg_inf_rounding_tag</a> </dd></dl>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_393b27578f88cdebcee55a9120110f4f.html">cnl</a></li><li class="navelem"><a class="el" href="dir_65345d10d925e9ddef75e5eba73807ed.html">_impl</a></li><li class="navelem"><a class="el" href="dir_d5c3c1db204be0ddcc7a0f98709c6e7b.html">operators</a></li><li class="navelem"><a class="el" href="operators_2generic_8h.html">generic.h</a></li>
+    <li class="navelem"><a class="el" href="namespacecnl.html">cnl</a></li><li class="navelem"><a class="el" href="structcnl_1_1neg__inf__rounding__tag.html">neg_inf_rounding_tag</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>

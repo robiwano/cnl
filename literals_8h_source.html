@@ -27,7 +27,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">CNL
-   &#160;<span id="projectnumber">v1.0.0</span>
+   &#160;<span id="projectnumber">development</span>
    </div>
    <div id="projectbrief">Compositional Numeric Library</div>
   </td>
@@ -127,9 +127,9 @@ $(document).ready(function(){initNavTree('literals_8h_source.html',''); initResi
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keyword">template</span>&lt;<span class="keywordtype">int</span> NumChars&gt;</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="comment">// NOLINTNEXTLINE(cppcoreguidelines-avoid-c-arrays)</span></div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        CNL_NODISCARD constexpr <span class="keyword">auto</span> decimal_wide_integer_parse(<span class="keyword">const</span> <span class="keywordtype">char</span> (&amp; s)[NumChars])</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        -&gt; <a class="code" href="namespacecnl.html#a125c8d4d7407de88efbd1a8709d70ac9">wide_integer</a>&lt;(NumChars-1)*3322/1000+1&gt;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        -&gt; <a class="code" href="namespacecnl.html#af33d9f07892d68c409e9afa238cccaf0">wide_integer</a>&lt;(NumChars-1)*3322/1000+1&gt;</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        {</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            <span class="keyword">using</span> result = <a class="code" href="namespacecnl.html#a125c8d4d7407de88efbd1a8709d70ac9">wide_integer</a>&lt;(NumChars-1)*3322/1000+1&gt;;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            <span class="keyword">using</span> result = <a class="code" href="namespacecnl.html#af33d9f07892d68c409e9afa238cccaf0">wide_integer</a>&lt;(NumChars-1)*3322/1000+1&gt;;</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            <span class="keywordflow">return</span> result(wide_integer_parse&lt;10&gt;(s, parse_dec_char, rep_t&lt;result&gt;{}));</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        }</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
@@ -151,9 +151,9 @@ $(document).ready(function(){initNavTree('literals_8h_source.html',''); initResi
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keyword">template</span>&lt;<span class="keywordtype">int</span> NumChars&gt;</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="comment">// NOLINTNEXTLINE(cppcoreguidelines-avoid-c-arrays)</span></div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        CNL_NODISCARD constexpr <span class="keyword">auto</span> octal_wide_integer_parse(<span class="keyword">const</span> <span class="keywordtype">char</span> (&amp; s)[NumChars])</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        -&gt; <a class="code" href="namespacecnl.html#a125c8d4d7407de88efbd1a8709d70ac9">wide_integer</a>&lt;(NumChars-1)*3&gt;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        -&gt; <a class="code" href="namespacecnl.html#af33d9f07892d68c409e9afa238cccaf0">wide_integer</a>&lt;(NumChars-1)*3&gt;</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        {</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            <span class="keyword">using</span> result = <a class="code" href="namespacecnl.html#a125c8d4d7407de88efbd1a8709d70ac9">wide_integer</a>&lt;(NumChars-1)*3&gt;;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            <span class="keyword">using</span> result = <a class="code" href="namespacecnl.html#af33d9f07892d68c409e9afa238cccaf0">wide_integer</a>&lt;(NumChars-1)*3&gt;;</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            <span class="keywordflow">return</span> result(wide_integer_parse&lt;8&gt;(s, parse_oct_char, rep_t&lt;result&gt;{}));</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        }</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
@@ -176,9 +176,9 @@ $(document).ready(function(){initNavTree('literals_8h_source.html',''); initResi
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="keyword">template</span>&lt;<span class="keywordtype">int</span> NumChars&gt;</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="comment">// NOLINTNEXTLINE(cppcoreguidelines-avoid-c-arrays)</span></div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        CNL_NODISCARD constexpr <span class="keyword">auto</span> binary_wide_integer_parse(<span class="keyword">const</span> <span class="keywordtype">char</span> (&amp; s)[NumChars])</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        -&gt; <a class="code" href="namespacecnl.html#a125c8d4d7407de88efbd1a8709d70ac9">wide_integer</a>&lt;NumChars-1&gt;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        -&gt; <a class="code" href="namespacecnl.html#af33d9f07892d68c409e9afa238cccaf0">wide_integer</a>&lt;NumChars-1&gt;</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        {</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            <span class="keyword">using</span> result = <a class="code" href="namespacecnl.html#a125c8d4d7407de88efbd1a8709d70ac9">wide_integer</a>&lt;NumChars-1&gt;;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            <span class="keyword">using</span> result = <a class="code" href="namespacecnl.html#af33d9f07892d68c409e9afa238cccaf0">wide_integer</a>&lt;NumChars-1&gt;;</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            <span class="keywordflow">return</span> result(wide_integer_parse&lt;2&gt;(s, parse_bin_char, rep_t&lt;result&gt;{}));</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        }</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
@@ -211,9 +211,9 @@ $(document).ready(function(){initNavTree('literals_8h_source.html',''); initResi
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        <span class="keyword">template</span>&lt;<span class="keywordtype">int</span> NumChars&gt;</div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        <span class="comment">// NOLINTNEXTLINE(cppcoreguidelines-avoid-c-arrays)</span></div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        CNL_NODISCARD constexpr <span class="keyword">auto</span> hexadecimal_wide_integer_parse(<span class="keyword">const</span> <span class="keywordtype">char</span> (&amp; s)[NumChars])</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        -&gt; <a class="code" href="namespacecnl.html#a125c8d4d7407de88efbd1a8709d70ac9">wide_integer</a>&lt;(NumChars-1)*4&gt;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        -&gt; <a class="code" href="namespacecnl.html#af33d9f07892d68c409e9afa238cccaf0">wide_integer</a>&lt;(NumChars-1)*4&gt;</div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        {</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;            <span class="keyword">using</span> result = <a class="code" href="namespacecnl.html#a125c8d4d7407de88efbd1a8709d70ac9">wide_integer</a>&lt;(NumChars-1)*4&gt;;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;            <span class="keyword">using</span> result = <a class="code" href="namespacecnl.html#af33d9f07892d68c409e9afa238cccaf0">wide_integer</a>&lt;(NumChars-1)*4&gt;;</div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;            <span class="keywordflow">return</span> result(wide_integer_parse&lt;16&gt;(s, parse_hex_char, rep_t&lt;result&gt;{}));</div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        }</div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
@@ -250,7 +250,7 @@ $(document).ready(function(){initNavTree('literals_8h_source.html',''); initResi
 <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;<span class="preprocessor">#endif  // CNL_IMPL_WIDE_INTEGER_LITERALS_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="anamespacecnl_html_a125c8d4d7407de88efbd1a8709d70ac9"><div class="ttname"><a href="namespacecnl.html#a125c8d4d7407de88efbd1a8709d70ac9">cnl::wide_integer</a></div><div class="ttdeci">_impl::number&lt; typename wide_tag&lt; Digits, Narrowest &gt;::_rep, wide_tag&lt; Digits, Narrowest &gt; &gt; wide_integer</div><div class="ttdoc">An integer of limitless width.</div><div class="ttdef"><b>Definition:</b> definition.h:20</div></div>
+<div class="ttc" id="anamespacecnl_html_af33d9f07892d68c409e9afa238cccaf0"><div class="ttname"><a href="namespacecnl.html#af33d9f07892d68c409e9afa238cccaf0">cnl::wide_integer</a></div><div class="ttdeci">_impl::number&lt; typename wide_tag&lt; Digits, Narrowest &gt;::rep, wide_tag&lt; Digits, Narrowest &gt; &gt; wide_integer</div><div class="ttdoc">An integer of limitless width.</div><div class="ttdef"><b>Definition:</b> definition.h:20</div></div>
 <div class="ttc" id="anamespacecnl_html"><div class="ttname"><a href="namespacecnl.html">cnl</a></div><div class="ttdoc">compositional numeric library</div><div class="ttdef"><b>Definition:</b> abs.h:13</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

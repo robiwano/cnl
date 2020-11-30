@@ -27,7 +27,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">CNL
-   &#160;<span id="projectnumber">v1.0.0</span>
+   &#160;<span id="projectnumber">development</span>
    </div>
    <div id="projectbrief">Compositional Numeric Library</div>
   </td>
@@ -160,7 +160,7 @@ $(document).ready(function(){initNavTree('__impl_2scaled__integer_2numbers_8h_so
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="comment">// Given two alternative ways to generate a constant value:</span></div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="comment">// tries to choose the best and returns the result.</span></div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Float, <span class="keyword">typename</span> Rep, <span class="keywordtype">int</span> Exponent&gt;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        CNL_NODISCARD constexpr <span class="keyword">auto</span> constant_with_fallback(Float constant, scaled_integer&lt;Rep, power&lt;Exponent&gt;&gt;(*procedure)()) {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        CNL_NODISCARD constexpr <span class="keyword">auto</span> constant_with_fallback(Float constant, scaled_integer&lt;Rep, power&lt;Exponent&gt;&gt;(*procedure)()) {  <span class="comment">// NOLINT(misc-unused-parameters)</span></div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            <span class="keyword">using</span> fp = scaled_integer&lt;Rep, power&lt;Exponent&gt;&gt;;</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            <span class="keyword">auto</span> <span class="keyword">const</span> required_integer_digits = used_digits(<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(constant));</div>

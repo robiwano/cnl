@@ -68,7 +68,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "__impl_2duplex__integer_2rounding_8h_source.html",
-"operator__helpers_8h_source.html"
+"numeric_8h_source.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

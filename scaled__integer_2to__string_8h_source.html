@@ -27,7 +27,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">CNL
-   &#160;<span id="projectnumber">v1.0.0</span>
+   &#160;<span id="projectnumber">development</span>
    </div>
    <div id="projectbrief">Compositional Numeric Library</div>
   </td>
@@ -106,7 +106,7 @@ $(document).ready(function(){initNavTree('scaled__integer_2to__string_8h_source.
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keyword">using</span> <a class="codeRef" href="http://en.cppreference.com/w/cpp/string/basic_string/to_string.html">std::to_string</a>;</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Rep, <span class="keywordtype">int</span> Exponent&gt;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="codeRef" href="http://en.cppreference.com/w/cpp/string/basic_string.html">std::string</a> <a class="codeRef" href="http://en.cppreference.com/w/cpp/string/basic_string/to_string.html">to_string</a>(<a class="code" href="classcnl_1_1scaled__integer.html">cnl::scaled_integer</a>&lt;Rep, power&lt;Exponent&gt;&gt; <span class="keyword">const</span>&amp; value)</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="codeRef" href="http://en.cppreference.com/w/cpp/string/basic_string.html">std::string</a> <a class="codeRef" href="http://en.cppreference.com/w/cpp/string/basic_string/to_string.html">to_string</a>(<a class="code" href="classcnl_1_1scaled__integer.html">cnl::scaled_integer</a>&lt;Rep, power&lt;Exponent&gt;&gt; <span class="keyword">const</span>&amp; value)  <span class="comment">// NOLINT(misc-unused-parameters)</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    {</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keyword">auto</span> chars = to_chars(value);</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keywordflow">return</span> chars.data();</div>

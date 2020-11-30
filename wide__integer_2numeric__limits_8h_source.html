@@ -27,7 +27,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">CNL
-   &#160;<span id="projectnumber">v1.0.0</span>
+   &#160;<span id="projectnumber">development</span>
    </div>
    <div id="projectbrief">Compositional Numeric Library</div>
   </td>
@@ -108,7 +108,7 @@ $(document).ready(function(){initNavTree('wide__integer_2numeric__limits_8h_sour
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="comment">// cnl::numeric_limits specialization for overflow_integer</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keyword">template</span>&lt;<span class="keywordtype">int</span> Digits, <span class="keyword">typename</span> Narrowest&gt;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">struct </span>numeric_limits&lt;<a class="code" href="namespacecnl.html#a125c8d4d7407de88efbd1a8709d70ac9">wide_integer</a>&lt;Digits, Narrowest&gt;&gt;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">struct </span>numeric_limits&lt;<a class="code" href="namespacecnl.html#af33d9f07892d68c409e9afa238cccaf0">wide_integer</a>&lt;Digits, Narrowest&gt;&gt;</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            : numeric_limits&lt;_impl::rep_t&lt;wide_integer&lt;Digits, Narrowest&gt;&gt;&gt; {</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keyword">static</span> constexpr <span class="keywordtype">bool</span> is_integer = <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="comment">// wide_integer-specific helpers</span></div>
@@ -137,7 +137,7 @@ $(document).ready(function(){initNavTree('wide__integer_2numeric__limits_8h_sour
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    };</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keyword">template</span>&lt;<span class="keywordtype">int</span> Digits, <span class="keyword">typename</span> Narrowest&gt;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keyword">struct </span>numeric_limits&lt;<a class="code" href="namespacecnl.html#a125c8d4d7407de88efbd1a8709d70ac9">wide_integer</a>&lt;Digits, Narrowest&gt; const&gt;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keyword">struct </span>numeric_limits&lt;<a class="code" href="namespacecnl.html#af33d9f07892d68c409e9afa238cccaf0">wide_integer</a>&lt;Digits, Narrowest&gt; const&gt;</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            : numeric_limits&lt;wide_integer&lt;Digits, Narrowest&gt;&gt; {</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keyword">static</span> constexpr <span class="keywordtype">bool</span> is_integer = <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    };</div>
@@ -146,7 +146,7 @@ $(document).ready(function(){initNavTree('wide__integer_2numeric__limits_8h_sour
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor">#endif  // CNL_IMPL_WIDE_INTEGER_NUMERIC_LIMITS_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="anamespacecnl_html_a125c8d4d7407de88efbd1a8709d70ac9"><div class="ttname"><a href="namespacecnl.html#a125c8d4d7407de88efbd1a8709d70ac9">cnl::wide_integer</a></div><div class="ttdeci">_impl::number&lt; typename wide_tag&lt; Digits, Narrowest &gt;::_rep, wide_tag&lt; Digits, Narrowest &gt; &gt; wide_integer</div><div class="ttdoc">An integer of limitless width.</div><div class="ttdef"><b>Definition:</b> definition.h:20</div></div>
+<div class="ttc" id="anamespacecnl_html_af33d9f07892d68c409e9afa238cccaf0"><div class="ttname"><a href="namespacecnl.html#af33d9f07892d68c409e9afa238cccaf0">cnl::wide_integer</a></div><div class="ttdeci">_impl::number&lt; typename wide_tag&lt; Digits, Narrowest &gt;::rep, wide_tag&lt; Digits, Narrowest &gt; &gt; wide_integer</div><div class="ttdoc">An integer of limitless width.</div><div class="ttdef"><b>Definition:</b> definition.h:20</div></div>
 <div class="ttc" id="alowest_html"><div class="ttname"><a href="http://en.cppreference.com/w/cpp/types/numeric_limits/lowest.html">std::numeric_limits&lt; T &gt;::lowest</a></div><div class="ttdeci">T lowest(T... args)</div></div>
 <div class="ttc" id="anamespacecnl_html"><div class="ttname"><a href="namespacecnl.html">cnl</a></div><div class="ttdoc">compositional numeric library</div><div class="ttdef"><b>Definition:</b> abs.h:13</div></div>
 <div class="ttc" id="amin_html"><div class="ttname"><a href="http://en.cppreference.com/w/cpp/types/numeric_limits/min.html">std::numeric_limits&lt; T &gt;::min</a></div><div class="ttdeci">T min(T... args)</div></div>

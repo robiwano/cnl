@@ -27,7 +27,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">CNL
-   &#160;<span id="projectnumber">v1.0.0</span>
+   &#160;<span id="projectnumber">development</span>
    </div>
    <div id="projectbrief">Compositional Numeric Library</div>
   </td>
@@ -113,7 +113,7 @@ $(document).ready(function(){initNavTree('divide_8h_source.html',''); initResiza
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Lhs, <span class="keyword">typename</span> Rhs&gt;</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keyword">struct </span>heterogeneous_duplex_divide_operator {</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            <span class="keyword">using</span> common_type = rep_t&lt;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                    <a class="code" href="namespacecnl.html#a125c8d4d7407de88efbd1a8709d70ac9">wide_integer</a>&lt;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                    <a class="code" href="namespacecnl.html#af33d9f07892d68c409e9afa238cccaf0">wide_integer</a>&lt;</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                        <a class="codeRef" href="http://en.cppreference.com/w/cpp/algorithm/max.html">max</a>(digits&lt;Lhs&gt;::value, digits&lt;Rhs&gt;::value),</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                        set_signedness_t&lt;int, is_signed&lt;Lhs&gt;::value|is_signed&lt;Rhs&gt;::value&gt;&gt;&gt;;</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
@@ -251,7 +251,7 @@ $(document).ready(function(){initNavTree('divide_8h_source.html',''); initResiza
 <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;<span class="preprocessor">#endif  // CNL_IMPL_DUPLEX_INTEGER_DIVIDE_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="anamespacecnl_html_a125c8d4d7407de88efbd1a8709d70ac9"><div class="ttname"><a href="namespacecnl.html#a125c8d4d7407de88efbd1a8709d70ac9">cnl::wide_integer</a></div><div class="ttdeci">_impl::number&lt; typename wide_tag&lt; Digits, Narrowest &gt;::_rep, wide_tag&lt; Digits, Narrowest &gt; &gt; wide_integer</div><div class="ttdoc">An integer of limitless width.</div><div class="ttdef"><b>Definition:</b> definition.h:20</div></div>
+<div class="ttc" id="anamespacecnl_html_af33d9f07892d68c409e9afa238cccaf0"><div class="ttname"><a href="namespacecnl.html#af33d9f07892d68c409e9afa238cccaf0">cnl::wide_integer</a></div><div class="ttdeci">_impl::number&lt; typename wide_tag&lt; Digits, Narrowest &gt;::rep, wide_tag&lt; Digits, Narrowest &gt; &gt; wide_integer</div><div class="ttdoc">An integer of limitless width.</div><div class="ttdef"><b>Definition:</b> definition.h:20</div></div>
 <div class="ttc" id="aduplex__integer_2type_8h_html"><div class="ttname"><a href="duplex__integer_2type_8h.html">type.h</a></div></div>
 <div class="ttc" id="anamespacecnl_html"><div class="ttname"><a href="namespacecnl.html">cnl</a></div><div class="ttdoc">compositional numeric library</div><div class="ttdef"><b>Definition:</b> abs.h:13</div></div>
 <div class="ttc" id="amax_html"><div class="ttname"><a href="http://en.cppreference.com/w/cpp/algorithm/max.html">std::max</a></div><div class="ttdeci">T max(T... args)</div></div>

@@ -27,7 +27,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">CNL
-   &#160;<span id="projectnumber">v1.0.0</span>
+   &#160;<span id="projectnumber">development</span>
    </div>
    <div id="projectbrief">Compositional Numeric Library</div>
   </td>
@@ -137,6 +137,9 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcnl_1_1nearest__rounding__tag.html">nearest_rounding_tag</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">tag to specify round-to-nearest behavior in arithemtic operations  <a href="structcnl_1_1nearest__rounding__tag.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcnl_1_1neg__inf__rounding__tag.html">neg_inf_rounding_tag</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">tag to specify floor or round towards minus infinity rounding behavior in arithmetic operations  <a href="structcnl_1_1neg__inf__rounding__tag.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcnl_1_1remove__signedness.html">remove_signedness</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">given a numeric type, defines member <code>type</code> as the equivalent unsigned type  <a href="structcnl_1_1remove__signedness.html#details">More...</a><br /></td></tr>
@@ -257,11 +260,11 @@ template&lt;class T , int Digits&gt; </td></tr>
 <tr class="memitem:ae5d22fc7aa27c2acee069a24af5822df"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecnl.html#ae5d22fc7aa27c2acee069a24af5822df">unsigned_multiprecision</a> = _sized_integer_impl::number&lt; NumDigits, _bmp::unsigned_magnitude &gt;</td></tr>
 <tr class="memdesc:ae5d22fc7aa27c2acee069a24af5822df"><td class="mdescLeft">&#160;</td><td class="mdescRight">alias to an unsigned, fixed-size Boost.Multiprecision type suitable for instantiating <a class="el" href="classcnl_1_1scaled__integer.html">cnl::scaled_integer</a>  <a href="namespacecnl.html#ae5d22fc7aa27c2acee069a24af5822df">More...</a><br /></td></tr>
 <tr class="separator:ae5d22fc7aa27c2acee069a24af5822df"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a125c8d4d7407de88efbd1a8709d70ac9"><td class="memTemplParams" colspan="2"><a id="a125c8d4d7407de88efbd1a8709d70ac9"></a>
+<tr class="memitem:af33d9f07892d68c409e9afa238cccaf0"><td class="memTemplParams" colspan="2"><a id="af33d9f07892d68c409e9afa238cccaf0"></a>
 template&lt;int Digits = digits&lt;int&gt;::value, typename Narrowest  = int&gt; </td></tr>
-<tr class="memitem:a125c8d4d7407de88efbd1a8709d70ac9"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecnl.html#a125c8d4d7407de88efbd1a8709d70ac9">wide_integer</a> = _impl::number&lt; typename wide_tag&lt; Digits, Narrowest &gt;::_rep, wide_tag&lt; Digits, Narrowest &gt; &gt;</td></tr>
-<tr class="memdesc:a125c8d4d7407de88efbd1a8709d70ac9"><td class="mdescLeft">&#160;</td><td class="mdescRight">An integer of limitless width. <br /></td></tr>
-<tr class="separator:a125c8d4d7407de88efbd1a8709d70ac9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af33d9f07892d68c409e9afa238cccaf0"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecnl.html#af33d9f07892d68c409e9afa238cccaf0">wide_integer</a> = _impl::number&lt; typename wide_tag&lt; Digits, Narrowest &gt;::<a class="el" href="structcnl_1_1rep.html">rep</a>, wide_tag&lt; Digits, Narrowest &gt; &gt;</td></tr>
+<tr class="memdesc:af33d9f07892d68c409e9afa238cccaf0"><td class="mdescLeft">&#160;</td><td class="mdescRight">An integer of limitless width. <br /></td></tr>
+<tr class="separator:af33d9f07892d68c409e9afa238cccaf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>

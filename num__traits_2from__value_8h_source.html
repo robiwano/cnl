@@ -27,7 +27,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">CNL
-   &#160;<span id="projectnumber">v1.0.0</span>
+   &#160;<span id="projectnumber">development</span>
    </div>
    <div id="projectbrief">Compositional Numeric Library</div>
   </td>
@@ -131,12 +131,12 @@ $(document).ready(function(){initNavTree('num__traits_2from__value_8h_source.htm
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">class</span> Number, CNL_IMPL_CONSTANT_VALUE_TYPE Value&gt;</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keyword">struct </span>from_value&lt;Number, constant&lt;Value&gt;, _impl::enable_if_t&lt;_impl::is_integral&lt;Number&gt;::value&gt;&gt; {</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keyword">using</span> _result_type = <a class="code" href="namespacecnl.html#ad615c2be24d5d9aa2b652bbe834a159b">set_digits_t</a>&lt;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keyword">using</span> result_type = <a class="code" href="namespacecnl.html#ad615c2be24d5d9aa2b652bbe834a159b">set_digits_t</a>&lt;</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                add_signedness_t&lt;Number&gt;,</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                _impl::max(digits&lt;int&gt;::value, _impl::used_digits(Value))&gt;;</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        CNL_NODISCARD constexpr _result_type operator()(constant&lt;Value&gt; <span class="keyword">const</span> &amp;value)<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            <span class="keywordflow">return</span> _result_type(value);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        CNL_NODISCARD constexpr result_type operator()(constant&lt;Value&gt; <span class="keyword">const</span> &amp;value)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            <span class="keywordflow">return</span> result_type(value);</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        }</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    };</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
